@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+<!--       <li routerLinkActive="active">
+        <a routerLink="bqts">Boquettes</a>
+      </li> -->
+
+<!--       <ul class="list-group">
+        <app-appareil  *ngFor="let appareil of appareils; let i = index"
+                       [appareilName]="appareil.name"
+                       [appareilStatus]="appareil.status" 
+                       [index]="i"></app-appareil>
+    </ul> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li>
+        <a>Boquettes</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="auth/signin">Connexion</a>
+      </li>
+      <li>
+        <a (click)="onSignOut()"
+           style="cursor:pointer"
+           *ngIf="isAuth">Déconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>

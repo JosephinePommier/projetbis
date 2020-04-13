@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<ul class="list-group">
+  <app-bqtlist  *ngFor="let boquette of boquettes; let i = index"
+                 [boquetteName]="boquette.name"
+                 [boquetteStatut]="boquette.statut" 
+                 [index]="i"></app-bqtlist>
+</ul>
